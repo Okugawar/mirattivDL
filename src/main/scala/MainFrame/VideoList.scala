@@ -29,7 +29,7 @@ class VideoList extends VBox {
         lives.as[JsArray].value.foreach(v => {
           val liveid = (v \ "live_id").as[String]
           val title = (v \ "title").as[String]
-          val stmp = (v \ "created_at").as[Long] * 1000
+          val stmp = (v \ "started_at").as[Long] * 1000
           val dfmt = new SimpleDateFormat("yyyy-MM-dd_HH:mm")
 
           children.add(new HBox {

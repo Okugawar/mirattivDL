@@ -15,7 +15,7 @@ object MainFrame extends JFXApp {
     scene = new Scene(800.0, 600.0) {
       root = new BorderPane {
         val vl = new VideoList
-        top = new MemberTab(vl)
+        left = new MemberTab(vl)
         center = vl
         bottom = MessageLog
       }
